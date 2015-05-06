@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    include _partial/head
+  body
+    - var count = 0
+
+    ul
+      - page.posts.each(function(article){
+        - count++
+        if count >= 10 
+          - count = 1
+        li
+          article
+            h2
+              a(href=config.root + article.path)= article.title
+              p= count
+              p= article.type
+      - })
+
+    include _partial/article_list_pagination
