@@ -5,12 +5,12 @@ html(lang='en')
   body
     - var count = 0
 
-    ul
+    ul.Posts
       - page.posts.each(function(article){
         - count++
         if count >= 10 
           - count = 1
-        li
+        li.Post
           article
             h2
               a(href=config.root + article.path)= article.title
