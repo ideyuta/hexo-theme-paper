@@ -8,14 +8,17 @@ html(lang='en')
     ul.Posts
       - page.posts.each(function(article){
         - count++
-        if count >= 10 
-          - count = 1
-        li.Post
-          article
-            h2
-              a(href=config.root + article.path)= article.title
-              p= count
-              p= article.type
+        li(class="Post L#{article.style} L#{count}")
+          if(article.style == "text")
+            a(href=config.root + article.path)= article.title
+            p= article.description
+          else if(article.style == "photo")
+            a(href=config.root + article.path)= article.title
+            img(src=article.thumb)
+          else if(article.style == "thumb")
+            a(href=config.root + article.path)= article.title
+            p= article.description
+            img(src=article.thumb)
       - })
 
     include _partial/article_list_pagination
