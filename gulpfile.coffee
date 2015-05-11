@@ -16,8 +16,37 @@ dirs =
   dist: './source'
 
 paths =
-  coffee: ["#{dirs.src}/scripts/**/*.coffee"]
   browserify: ["#{dirs.src}/scripts/base.coffee"]
+  coffee: ["#{dirs.src}/scripts/**/*.coffee"]
+  sass: ["#{dirs.src}/sass/**/*.scss"]
+
+###
+# CSS
+###
+
+# SCSS -> CSS 変換
+gulp.task 'sass', ->
+  gulp.src paths.sass
+    .pipe plumberWithNotify()
+    #.pipe $.cached()
+    .pipe $.using()
+    .pipe $.compass
+      css: "#{dirs.dist}/css"
+      sass: "#{dirs.src}/sass"
+    .pipe $.size()
+    .pipe gulp.dest "#{dirs.dist}/css/"
+
+# CSS 圧縮
+gulp.task 'optimizeCSS', ->
+  gulp.src ["#{dirs.dist}/css/**/*{.*,}[^.min].css"]
+    .pipe $.cssmin noAdvanced: true
+    .pipe $.size title: 'minify'
+    .pipe $.rename extname: '.min.css'
+    .pipe gulp.dest "#{dirs.dist}/css/"
+
+# CSS 生成・圧縮
+gulp.task 'prodCSS', (cb) ->
+  runSequence 'sass', 'optimizeCSS', cb
 
 
 ###
@@ -71,6 +100,7 @@ gulp.task 'server', ->
 # ファイル監視とライブリロード
 gulp.task 'watch', ->
   gulp.watch paths.browserify, ['js', browserSync.reload]
+  gulp.watch paths.sass, ['sass', browserSync.reload]
 
 
 ###
@@ -78,12 +108,12 @@ gulp.task 'watch', ->
 ###
 
 # ビルドディレクトリのcleaning
-gulp.task 'clean', del.bind null, ["#{dirs.dist}/js/"]
+gulp.task 'clean', del.bind null, ["#{dirs.dist}"]
 
 # デフォルトタスク (確認サーバ起動とファイル監視)
-gulp.task 'default', ['server', 'watch']
+gulp.task 'default', ['watch']
 
 # 本番用ファイル生成タスク
 gulp.task 'build', ->
   env = 'production'
-  runSequence 'clean', 'prodJS'
+  runSequence 'clean', ['prodJS', 'prodCSS']
