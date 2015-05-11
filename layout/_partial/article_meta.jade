@@ -1,12 +1,14 @@
 mixin date(date)
-  = date.format(config.date_format)
+  .date
+    p= date.format(config.date_format)
 
 mixin category(categories)
 
   if categories.length > 0
-    |  in 
-    - categories.each(function(category){
-      a(href=config.root + category.path)
-        = category.name
-      | &ensp;
-    - })
+    .categories
+      ul
+        - categories.each(function(category){
+          li
+            a(href=config.root + category.path)
+              = category.name
+        - })
