@@ -26,27 +26,27 @@ $serif: 'YuMincho', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho P
 // :not(input){ -webkit-user-select: none; }
 html, body {
   @include size(100%, auto, 100%, 100%);
-  @include typo($default-font-size, $light-black, 300, $default-line-height);
+  @include typo($base-font-size, $gray900, 300, $default-line-height);
   text-transform: none;
   -webkit-text-size-adjust: 100%;
   font-family:'Noto Sans Japanese', $font-family-body;
-  background: $white;
+  background: #fff;
 }
 
 a {
-  &:link { color: $blue; }
-  &:visited { color: $blue; }
-  &:hover { color: $dark-blue; }
-  &:active { color: $dark-blue; }
+  &:link { color: $blue500; }
+  &:visited { color: $blue700; }
+  &:hover { color: $blue900; }
+  &:active { color: $blue900; }
 }
 
 .highlight  {
   padding: 16px;
   margin: 8px 0;
-  border: 1px solid $extra-light-gray;
+  border: 1px solid $gray100;
   font-family: 'Inconsolata';
   letter-spacing: 0.04em;
-  background: $dark-white;
+  background: $gray50;
   line-height: 1.4;
   .title {
     font-size: 12px;

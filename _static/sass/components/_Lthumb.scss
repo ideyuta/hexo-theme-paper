@@ -32,12 +32,12 @@
         bottom: 0;
       }
       .title {
-        @include typo(32px, $black, 300, 1.6);
+        @include typo(32px, #000, 300, 1.6);
         letter-spacing: .04em;
         padding: 16px 0;
       }
       .description {
-        @include typo(16px, $gray, 100, 1.6);
+        @include typo(16px, $gray500, 100, 1.6);
         letter-spacing: .04em;
         padding: 0 0 16px 0;
       }
@@ -64,12 +64,12 @@
       overflow: hidden;
       position: relative;
       .title {
-        @include typo(20px, $black, 300, 1.6);
+        @include typo(20px, #000, 300, 1.6);
         letter-spacing: .04em;
         padding: 4px 0;
       }
       .description {
-        @include typo(14px, $gray, 100, 1.6);
+        @include typo(14px, $gray500, 100, 1.6);
         max-height: 100px;
         overflow: hidden;
         letter-spacing: .04em;
@@ -96,12 +96,12 @@
       overflow: hidden;
       position: relative;
       .title {
-        @include typo(20px, $black, 300, 1.6);
+        @include typo(20px, #000, 300, 1.6);
         letter-spacing: .04em;
         padding: 8px 0 4px 0;
       }
       .description {
-        @include typo(14px, $gray, 100, 1.6);
+        @include typo(14px, $gray500, 100, 1.6);
         max-height: 100px;
         overflow: hidden;
         letter-spacing: .04em;
@@ -128,12 +128,12 @@
       overflow: hidden;
       position: relative;
       .title {
-        @include typo(20px, $black, 300, 1.6);
+        @include typo(20px, #000, 300, 1.6);
         letter-spacing: .04em;
         padding: 8px 0 4px 0;
       }
       .description {
-        @include typo(14px, $gray, 100, 1.6);
+        @include typo(14px, $gray500, 100, 1.6);
         max-height: 100px;
         overflow: hidden;
         letter-spacing: .04em;
@@ -162,12 +162,12 @@
       overflow: hidden;
       position: relative;
       .title {
-        @include typo(20px, $black, 300, 1.6);
+        @include typo(20px, #000, 300, 1.6);
         letter-spacing: .04em;
         padding: 4px 0;
       }
       .description {
-        @include typo(14px, $gray, 100, 1.6);
+        @include typo(14px, $gray500, 100, 1.6);
         max-height: 100px;
         overflow: hidden;
         letter-spacing: .04em;

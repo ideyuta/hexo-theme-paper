@@ -24,19 +24,19 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: $gray; 
+      color: $gray500; 
       a {
-        color: $gray;
+        color: $gray500;
         line-height: 32px;
         &:hover {
           text-decoration: underline;
-          color: $dark-gray;
+          color: $gray700;
         }
       }
     }
     .arrow {
       width: 5%;
-      color: $gray;
+      color: $gray500;
       line-height: 30px;
     }
   }

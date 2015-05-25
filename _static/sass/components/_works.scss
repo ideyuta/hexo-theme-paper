@@ -4,32 +4,32 @@
   min-height: 300px;
   padding: 24px 0;
   float: right;
-  background: $extra-light-gray;
+  background: $gray100;
   .item {
     @include clearfix;
     @include size(200px, auto);
     padding: 0 0 8px 16px;
     display: none;
     a {
-      @include border(2px, solid, $white, $default-radius);
+      @include border(2px, solid, #fff, $default-radius);
       padding: 8px;
       display: block;
-      background: $white;
+      background: #fff;
       text-decoration: none;
       &:hover {
-        border-color: $blue;
+        border-color: $blue500;
       }
     }
     img { max-width: 100%; }
     .title {
-      @include typo(13px, $black, 500, 1.4);
+      @include typo(13px, #000, 500, 1.4);
       text-decoration: none;
       &:hover { text-decoration: underline; }
     }
     .data {
       padding: 0 0 4px 0;
       span {
-        @include typo($default-font-size - 2px, $gray, 300, 1.4);
+        @include typo($base-font-size - 2px, $gray500, 300, 1.4);
         padding: 0 8px 0 0;
       }
     }
