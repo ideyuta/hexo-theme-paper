@@ -1,8 +1,8 @@
 .Response {
   @include clearfix;
-  @include border(1px 0, solid, $extra-light-gray);
+  @include border(1px 0, solid, $gray100);
   padding: 32px;
-  background: $dark-white;
+  background: $gray50;
 
   li {
     padding: 0 16px 0 0;

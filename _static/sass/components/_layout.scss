@@ -1,7 +1,7 @@
 .L1 {
   @include clearfix;
   @include size(100%, 481px);
-  @include border(1px 0, solid, $extra-light-gray);
+  @include border(1px 0, solid, $gray100);
   clear: both;
   padding: 24px 0;
   overflow: hidden;
@@ -13,7 +13,7 @@
 
 .L2,
 .L3 {
-  @include border(0 1px 0 0, solid, $extra-light-gray);
+  @include border(0 1px 0 0, solid, $gray100);
 }
 
 .L2,
@@ -31,7 +31,7 @@
 }
 
 .L5 {
-  @include border(0 1px 0 0, solid, $extra-light-gray);
+  @include border(0 1px 0 0, solid, $gray100);
   @include size(63%, 600px);
   padding: 0 1.5%;
   float: left;
@@ -55,7 +55,7 @@
 }
 
 .L7 {
-  @include border(0 1px 0 0, solid, $extra-light-gray);
+  @include border(0 1px 0 0, solid, $gray100);
   padding: 0 1.5% 0 0;
 }
 .L8 {
