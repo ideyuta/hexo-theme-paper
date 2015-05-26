@@ -5,14 +5,11 @@
 //-------------------------------
 
 $img-path: '/static/img';
-$theme-color: #369;
-$default-view-width: 1024px;
-$default-font-size: 13px;
+$base-view-width: 1168px;
 $default-line-height: 1.5;
 
 @import "../zenigame/src/zenigame";
 
-$serif: 'YuMincho', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro';
 
 //-------------------------------
 // Base
@@ -29,7 +26,7 @@ html, body {
   @include typo($base-font-size, $gray900, 300, $default-line-height);
   text-transform: none;
   -webkit-text-size-adjust: 100%;
-  font-family:'Noto Sans Japanese', $font-family-body;
+  font-family:'Noto Sans Japanese', $font;
   background: #fff;
 }
 
@@ -57,15 +54,11 @@ a {
 // Components
 //-------------------------------
 
-@import "components/loader";
 @import "components/pagination";
 @import "components/meta";
 @import "components/post";
 @import "components/posts";
-@import "components/profile";
-@import "components/recentPost";
-@import "components/responce";
-@import "components/works";
+@import "components/postDetail";
 
 @import "components/layout";
 @import "components/Ltext";

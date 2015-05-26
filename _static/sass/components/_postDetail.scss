@@ -1,0 +1,64 @@
+.PostDetail {
+  position: relative;
+  width: 100%;
+  .PostMeta {
+    @include clearfix;
+    @include space(80px 0, 0 auto);
+    max-width: 800px;
+    .title {
+      @include typo(48px, $gray900, 200, 1.5);
+      letter-spacing: 0.04em;
+    }
+    .date {
+      float: left;
+      p {
+        @include typo(12px, $gray300, 200, 30px);
+        letter-spacing: 0.12em;
+        margin: 0;
+      }
+    }
+    .categories {
+      float: left;
+      padding: 0 8px;
+      ul {
+        margin: 0;
+        li {
+          float: left;
+          list-style: none;
+          padding: 0 8px;
+          a {
+            @include typo(12px, $gray300, 200, 30px);
+            letter-spacing: 0.12em;
+            &:hover {
+              background: #fff;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .PostContent {
+    width: 100%;
+    margin: 0 auto;
+    .images {
+      img {
+        width: 100%;
+      }
+    }
+    h1, h2, h3, h4, h5, h6 {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    img {
+      max-width: 100%;
+    }
+    p {
+      @include typo(16px, $gray700, 300, 1.8);
+      letter-spacing: 0.04em;
+      max-width: 600px;
+      margin: 24px auto;
+    }
+  }
+}

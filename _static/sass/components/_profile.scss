@@ -4,7 +4,7 @@
     @include size(340px, auto);
     padding: 24px 0;
     .name {
-      @include typo(24px, $black, 500, 1);
+      @include typo(24px, #000, 500, 1);
       letter-spacing: 0.3em;
     }
     ul { padding: 16px 0; }
