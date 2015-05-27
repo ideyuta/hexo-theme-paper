@@ -1,0 +1,97 @@
+.highlight {
+  @include border(1px, solid, $gray200, 2px);
+  @include typo(14px, $gray500, 300);
+  background: $gray100;
+  font-family: 'Inconsolata';
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: auto;
+  padding: 8px 16px;
+  pre {
+    margin: 0;
+  }
+  .gutter {
+    @include border(0 1px 0 0, solid, $gray200);
+    color: $gray400;
+    padding-right: 16px;
+    text-align: right;
+  }
+  .code {
+    @include border(0 0 0 1px, solid, $gray200);
+    color: $gray700;
+    padding-left: 16px;
+  }
+}
+
+pre {
+  // Theme: Solarized - Light
+  // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
+  .comment,
+  .template_comment,
+  .diff .header,
+  .doctype,
+  .pi,
+  .lisp .string,
+  .javadoc {
+    color: #93a1a1;
+    font-style: italic;
+  }
+  .keyword,
+  .winutils,
+  .method,
+  .addition,
+  .css .tag,
+  .request,
+  .status,
+  .nginx .title {
+    color: #859900;
+  }
+  .number,
+  .command,
+  .string,
+  .tag .value,
+  .phpdoc,
+  .tex .formula,
+  .regexp,
+  .hexcolor {
+    color: #2aa198;
+  }
+  .title,
+  .localvars,
+  .chunk,
+  .decorator,
+  .built_in,
+  .identifier,
+  .vhdl,
+  .literal,
+  .id {
+    color: #268bd2;
+  }
+  .attribute,
+  .variable,
+  .lisp .body,
+  .smalltalk .number,
+  .constant,
+  .class .title,
+  .parent,
+  .haskell .type {
+    color: #b58900;
+  }
+  .preprocessor,
+  .preprocessor .keyword,
+  .shebang,
+  .symbol,
+  .symbol .string,
+  .diff .change,
+  .special,
+  .attr_selector,
+  .important,
+  .subst,
+  .cdata,
+  .clojure .title {
+    color: #cb4b16;
+  }
+  .deletion {
+    color: #dc322f;
+  }
+}
