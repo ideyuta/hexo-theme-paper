@@ -543,9 +543,6 @@ th {
   padding: 0;
 }
 
-/*
-Button Mixin
-*/
 .Alert {
   margin: 24px;
   padding: 16px;
@@ -554,56 +551,56 @@ Button Mixin
   margin: 0;
 }
 .Alert._Success {
-  border-style: solid;
   border-color: #63f794;
+  border-style: solid;
   border-width: 1px;
   background: #96fab7;
   color: #00852c;
 }
 .Alert._Info {
-  border-style: solid;
   border-color: #72cefc;
+  border-style: solid;
   border-width: 1px;
   background: #a4dffc;
   color: #006da3;
 }
 .Alert._Warning {
-  border-style: solid;
   border-color: #ffe873;
+  border-style: solid;
   border-width: 1px;
   background: #fff0a6;
   color: #bf7000;
 }
 .Alert._Danger {
-  border-style: solid;
   border-color: #ff9673;
+  border-style: solid;
   border-width: 1px;
   background: #ffbca6;
   color: #802000;
 }
 .Alert._Float._Success {
-  -webkit-box-shadow: 0 6px 24px #96fab7;
+  box-shadow: 0 6px 24px #96fab7;
   -moz-box-shadow: 0 6px 24px #96fab7;
   -ms-box-shadow: 0 6px 24px #96fab7;
-  box-shadow: 0 6px 24px #96fab7;
+  -webkit-box-shadow: 0 6px 24px #96fab7;
 }
 .Alert._Float._Info {
-  -webkit-box-shadow: 0 6px 16px #d7f0fc;
+  box-shadow: 0 6px 16px #d7f0fc;
   -moz-box-shadow: 0 6px 16px #d7f0fc;
   -ms-box-shadow: 0 6px 16px #d7f0fc;
-  box-shadow: 0 6px 16px #d7f0fc;
+  -webkit-box-shadow: 0 6px 16px #d7f0fc;
 }
 .Alert._Float._Warning {
-  -webkit-box-shadow: 0 6px 16px #fff2d9;
+  box-shadow: 0 6px 16px #fff2d9;
   -moz-box-shadow: 0 6px 16px #fff2d9;
   -ms-box-shadow: 0 6px 16px #fff2d9;
-  box-shadow: 0 6px 16px #fff2d9;
+  -webkit-box-shadow: 0 6px 16px #fff2d9;
 }
 .Alert._Float._Danger {
-  -webkit-box-shadow: 0 6px 16px #ffe2d9;
+  box-shadow: 0 6px 16px #ffe2d9;
   -moz-box-shadow: 0 6px 16px #ffe2d9;
   -ms-box-shadow: 0 6px 16px #ffe2d9;
-  box-shadow: 0 6px 16px #ffe2d9;
+  -webkit-box-shadow: 0 6px 16px #ffe2d9;
 }
 
 .Breadcrumbs ol {
@@ -620,8 +617,8 @@ Button Mixin
   clear: both;
 }
 .Breadcrumbs ol li {
-  font-size: 14px;
   color: #5c5c5c;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0;
@@ -640,29 +637,27 @@ Button Mixin
   *zoom: 1;
   width: auto;
   height: auto;
-  border-style: solid;
-  border-color: #f2f2f2;
-  border-width: 1px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  padding: 9px 18px;
-  display: inline-block;
-  text-decoration: none !important;
   cursor: pointer;
+  display: inline-block;
+  margin: 6px 4px;
+  padding: 9px 18px;
+  text-decoration: none !important;
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: 0 1px 3px #f2f2f2;
+  -moz-box-shadow: 0 1px 3px #f2f2f2;
+  -ms-box-shadow: 0 1px 3px #f2f2f2;
+  -webkit-box-shadow: 0 1px 3px #f2f2f2;
+  background-color: #fff;
+  color: #5c5c5c;
   font-size: 14px;
-  color: #949494;
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
-  -webkit-box-shadow: 0 1px 3px #f0f0f0;
-  -moz-box-shadow: 0 1px 3px #f0f0f0;
-  -ms-box-shadow: 0 1px 3px #f0f0f0;
-  box-shadow: 0 1px 3px #f0f0f0;
-  background-color: #fff;
-  border-color: #ebebeb;
-  color: #5c5c5c;
-  margin: 6px 4px;
 }
 .btn:before, .btn:after {
   content: '';
@@ -674,16 +669,6 @@ Button Mixin
 .btn:focus {
   outline: none;
 }
-.btn:hover {
-  background: #f7f7f7 !important;
-}
-.btn:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
-  background: #f0f0f0 !important;
-}
 .btn span + [class^="znicon-"],
 .btn span + [class*=" znicon-"],
 .btn span + .icon,
@@ -692,61 +677,71 @@ Button Mixin
 .btn .icon + span {
   padding: 0 0 0 8px;
 }
-
-.btn.f {
-  -webkit-box-shadow: none;
+.btn:hover {
+  background: #f2f2f2 !important;
+}
+.btn:active {
+  box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
+  -webkit-box-shadow: none;
+  background: #e0e0e0 !important;
+}
+
+.btn.f {
   box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -webkit-box-shadow: none;
   background-color: transparent;
   border: 0;
 }
 
 .btn.r {
-  -webkit-border-radius: 18px;
-  -moz-border-radius: 18px;
   border-radius: 18px;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
 }
 .btn.r.lg {
-  -webkit-border-radius: 32px;
-  -moz-border-radius: 32px;
   border-radius: 32px;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
 }
 .btn.r.md {
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
   border-radius: 24px;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
 }
 .btn.r.sm {
-  -webkit-border-radius: 14px;
-  -moz-border-radius: 14px;
   border-radius: 14px;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
 }
 .btn.r.xs {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 .btn.lg {
+  font-size: 20px;
   line-height: 32px;
   padding: 16px 32px;
-  font-size: 20px;
 }
 .btn.md {
+  font-size: 18px;
   line-height: 24px;
   padding: 12px 24px;
-  font-size: 18px;
 }
 .btn.sm {
+  font-size: 12px;
   line-height: 14px;
   padding: 7px 14px;
-  font-size: 12px;
 }
 .btn.xs {
+  font-size: 10px;
   line-height: 10px;
   padding: 5px 10px;
-  font-size: 10px;
 }
 
 .btn.is-disable {
@@ -788,12 +783,12 @@ Button Mixin
     padding: 0 0 0 24px;
   }
   .CheckBox input[type=checkbox] + label:before {
-    border-style: solid;
     border-color: #ccc;
+    border-style: solid;
     border-width: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
     position: absolute;
     top: 0;
     left: 0;
@@ -804,12 +799,12 @@ Button Mixin
     display: block;
   }
   .CheckBox input[type=checkbox]:checked + label:after {
-    border-style: solid;
     border-color: #32b7fa;
+    border-style: solid;
     border-width: 0 0 3px 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     position: absolute;
     top: 3px;
     left: 3px;
@@ -833,8 +828,8 @@ Button Mixin
   position: relative;
 }
 .DropDownMenu .btn .label {
-  border-style: solid;
   border-color: #e0e0e0;
+  border-style: solid;
   border-width: 0 1px 0 0;
   padding: 0 16px 0 0;
   font-weight: 500;
@@ -843,16 +838,16 @@ Button Mixin
   padding: 0 0 0 16px;
 }
 .DropDownMenu .itemList {
-  -webkit-box-shadow: 0 6px 24px #e0e0e0;
+  box-shadow: 0 6px 24px #e0e0e0;
   -moz-box-shadow: 0 6px 24px #e0e0e0;
   -ms-box-shadow: 0 6px 24px #e0e0e0;
-  box-shadow: 0 6px 24px #e0e0e0;
-  border-style: solid;
+  -webkit-box-shadow: 0 6px 24px #e0e0e0;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 1px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   position: absolute;
   top: 0;
   left: 0;
@@ -867,8 +862,8 @@ Button Mixin
   display: none;
 }
 .DropDownMenu .itemList .item {
-  font-size: 14px;
   color: #5c5c5c;
+  font-size: 14px;
   font-weight: 300;
   line-height: 18px;
   letter-spacing: 0;
@@ -2237,20 +2232,20 @@ Button Mixin
   height: 100%;
 }
 .Modal .dialog {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0 8px 24px #5c5c5c;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: 0 8px 24px #5c5c5c;
   -moz-box-shadow: 0 8px 24px #5c5c5c;
   -ms-box-shadow: 0 8px 24px #5c5c5c;
-  box-shadow: 0 8px 24px #5c5c5c;
+  -webkit-box-shadow: 0 8px 24px #5c5c5c;
   *zoom: 1;
-  padding: 0 24px;
-  margin: 24px auto;
   position: relative;
   z-index: 1;
   background: #fff;
+  margin: 24px auto;
   max-width: 640px;
+  padding: 0 24px;
   width: 80%;
 }
 .Modal .dialog:before, .Modal .dialog:after {
@@ -2277,15 +2272,15 @@ Button Mixin
   clear: both;
 }
 .Modal .content {
-  font-size: 14px;
   color: #212121;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
 }
 .Modal .control {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 1px 0 0 0;
   text-align: right;
 }
@@ -2295,23 +2290,23 @@ Button Mixin
   display: -webkit-inline-flex;
 }
 .Pagination .btn.isActive {
-  -webkit-box-shadow: none;
+  box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   cursor: default;
   background: #32b7fa !important;
   border-color: #32b7fa;
   color: #fff;
 }
 .Pagination .btn.isDisable {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 0;
-  -webkit-box-shadow: none;
+  box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   background: transparent !important;
   cursor: default;
 }
@@ -2354,12 +2349,12 @@ Button Mixin
     padding: 0 0 0 24px;
   }
   .RadioBtn input[type=radio] + label:before {
-    border-style: solid;
     border-color: #ccc;
+    border-style: solid;
     border-width: 2px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -2377,9 +2372,9 @@ Button Mixin
     background: #fff;
   }
   .RadioBtn input[type=radio]:checked + label:after {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -2398,8 +2393,8 @@ Button Mixin
 }
 
 .Tabs {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 0 0 1px 0;
   *zoom: 1;
   position: relative;
@@ -2417,10 +2412,10 @@ Button Mixin
   position: relative;
 }
 .Tabs .btn {
-  -webkit-box-shadow: none;
+  box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   margin: 0 4px;
 }
 .Tabs .btn.isActive {
@@ -2447,13 +2442,13 @@ Button Mixin
   border-left: 0;
 }
 .FlexTabs .tab .btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-box-shadow: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   border-right: 0;
   display: block;
   margin: 0;
@@ -2472,8 +2467,8 @@ Button Mixin
   height: auto;
 }
 .Table table caption {
-  font-size: 12px;
   color: #32b7fa;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0;
@@ -2482,13 +2477,13 @@ Button Mixin
   text-align: left;
 }
 .Table table thead {
-  border-style: solid;
   border-color: #212121;
+  border-style: solid;
   border-width: 2px 0;
 }
 .Table table thead th {
-  font-size: 14px;
   color: #000;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.5em;
   letter-spacing: 0;
@@ -2496,34 +2491,34 @@ Button Mixin
   text-align: left;
 }
 .Table table tbody td {
-  font-size: 14px;
   color: #000;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.5em;
   letter-spacing: 0;
   padding: 12px 8px;
 }
 .Table._Basic table tbody tr {
-  border-style: solid;
   border-color: #212121;
+  border-style: solid;
   border-width: 0 0 1px 0;
 }
 .Table._Basic table tbody td:first-child {
   font-weight: 700;
 }
 .Table._Row table tbody tr:first-child {
-  border-style: solid;
   border-color: #212121;
+  border-style: solid;
   border-width: 1px 0;
 }
 .Table._Row table tbody tr:first-child td:first-child {
-  border-style: solid;
   border-color: #212121;
+  border-style: solid;
   border-width: 2px 0;
 }
 .Table._Row table tbody td {
-  border-style: solid;
   border-color: #212121;
+  border-style: solid;
   border-width: 0 0 1px 0;
 }
 .Table._Row table tbody td:first-child {
@@ -2562,12 +2557,12 @@ Button Mixin
     height: 24px;
   }
   .ToggleBtn input[type=checkbox] + label:before {
-    border-style: solid;
     border-color: #ccc;
+    border-style: solid;
     border-width: 2px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -2578,16 +2573,16 @@ Button Mixin
     display: block;
   }
   .ToggleBtn input[type=checkbox] + label:after {
-    border-style: solid;
     border-color: #ccc;
+    border-style: solid;
     border-width: 1px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: 0 2px 4px #ccc;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0 2px 4px #ccc;
     -moz-box-shadow: 0 2px 4px #ccc;
     -ms-box-shadow: 0 2px 4px #ccc;
-    box-shadow: 0 2px 4px #ccc;
+    -webkit-box-shadow: 0 2px 4px #ccc;
     position: absolute;
     top: 1px;
     width: 20px;
@@ -2602,10 +2597,10 @@ Button Mixin
     border-color: #32b7fa;
   }
   .ToggleBtn input[type=checkbox]:checked + label:after {
-    -webkit-box-shadow: none;
+    box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
     border-color: #32b7fa;
     right: 1px;
   }
@@ -2615,32 +2610,32 @@ Button Mixin
   padding: 8px;
 }
 .TextField.isOK input {
-  border-style: solid;
   border-color: #00e64d;
+  border-style: solid;
   border-width: 0 0 2px 0;
 }
 .TextField.isError .validated {
   display: block;
 }
 .TextField.isError input {
-  border-style: solid;
   border-color: #fc490d;
+  border-style: solid;
   border-width: 0 0 2px 0;
 }
 .TextField .label {
-  font-size: 12px;
   color: #5c5c5c;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1em;
   letter-spacing: 0;
   margin: 0;
 }
 .TextField input {
-  border-style: solid;
   border-color: #ccc;
+  border-style: solid;
   border-width: 0 0 1px 0;
-  font-size: 16px;
   color: #212121;
+  font-size: 16px;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0;
@@ -2656,8 +2651,8 @@ Button Mixin
   font-weight: 100;
 }
 .TextField .validated {
-  font-size: 10px;
   color: #fc490d;
+  font-size: 10px;
   font-weight: 700;
   line-height: 1.5em;
   letter-spacing: 0;
@@ -2679,8 +2674,8 @@ html, body {
   height: auto;
   min-width: 100%;
   min-height: 100%;
-  font-size: 16px;
   color: #212121;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0;
@@ -2701,19 +2696,6 @@ a:hover {
 }
 a:active {
   color: #006da3;
-}
-
-.highlight {
-  padding: 16px;
-  margin: 8px 0;
-  border: 1px solid #f2f2f2;
-  font-family: 'Inconsolata';
-  letter-spacing: 0.04em;
-  background: #fafafa;
-  line-height: 1.4;
-}
-.highlight .title {
-  font-size: 12px;
 }
 
 .Pagination {
@@ -2779,8 +2761,8 @@ a:active {
   float: left;
 }
 .Meta .date p {
-  font-size: 12px;
   color: #ccc;
+  font-size: 12px;
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 0;
@@ -2795,8 +2777,8 @@ a:active {
   padding: 0 8px;
 }
 .Meta .categories ul li a {
-  font-size: 12px;
   color: #ccc;
+  font-size: 12px;
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 0;
@@ -2830,9 +2812,9 @@ a:active {
 }
 .PostDetail .PostMeta {
   *zoom: 1;
-  padding: 80px 0;
   margin: 0 auto;
   max-width: 800px;
+  padding: 80px 0;
 }
 .PostDetail .PostMeta:before, .PostDetail .PostMeta:after {
   content: '';
@@ -2842,8 +2824,8 @@ a:active {
   clear: both;
 }
 .PostDetail .PostMeta .title {
-  font-size: 48px;
   color: #212121;
+  font-size: 48px;
   font-weight: 200;
   line-height: 1.5;
   letter-spacing: 0;
@@ -2853,8 +2835,8 @@ a:active {
   float: left;
 }
 .PostDetail .PostMeta .date p {
-  font-size: 12px;
   color: #ccc;
+  font-size: 12px;
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 0;
@@ -2874,8 +2856,8 @@ a:active {
   padding: 0 8px;
 }
 .PostDetail .PostMeta .categories ul li a {
-  font-size: 12px;
   color: #ccc;
+  font-size: 12px;
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 0;
@@ -2900,8 +2882,8 @@ a:active {
   max-width: 100%;
 }
 .PostDetail .PostContent p {
-  font-size: 16px;
   color: #5c5c5c;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0;
@@ -2914,8 +2896,8 @@ a:active {
   *zoom: 1;
   width: 100%;
   height: 481px;
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 1px 0;
   clear: both;
   padding: 24px 0;
@@ -2936,8 +2918,8 @@ a:active {
 
 .L2,
 .L3 {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 0 1px 0 0;
 }
 
@@ -2960,8 +2942,8 @@ a:active {
 }
 
 .L5 {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 0 1px 0 0;
   width: 63%;
   height: 600px;
@@ -2991,8 +2973,8 @@ a:active {
 }
 
 .L7 {
-  border-style: solid;
   border-color: #f2f2f2;
+  border-style: solid;
   border-width: 0 1px 0 0;
   padding: 0 1.5% 0 0;
 }
@@ -3017,8 +2999,8 @@ a:active {
 }
 
 .Ltext.L1 .title {
-  font-size: 48px;
   color: #212121;
+  font-size: 48px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3028,8 +3010,8 @@ a:active {
   padding: 40px 16px;
 }
 .Ltext.L1 .description {
-  font-size: 16px;
   color: #949494;
+  font-size: 16px;
   font-weight: 100;
   line-height: 1.7;
   letter-spacing: 0;
@@ -3045,8 +3027,8 @@ a:active {
   background: #fff;
 }
 .Ltext.L1 .data span {
-  font-size: 15px;
   color: #949494;
+  font-size: 15px;
   font-weight: 100;
   line-height: 1.4;
   letter-spacing: 0;
@@ -3054,8 +3036,8 @@ a:active {
   text-transform: capitalize;
 }
 .Ltext.L2 .title, .Ltext.L3 .title, .Ltext.L4 .title, .Ltext.l5 .title, .Ltext.l6 .title, .Ltext.l7 .title, .Ltext.l8 .title {
-  font-size: 24px;
   color: #212121;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3064,8 +3046,8 @@ a:active {
   padding: 24px 16px;
 }
 .Ltext.L2 .description, .Ltext.L3 .description, .Ltext.L4 .description, .Ltext.l5 .description, .Ltext.l6 .description, .Ltext.l7 .description, .Ltext.l8 .description {
-  font-size: 14px;
   color: #949494;
+  font-size: 14px;
   font-weight: 100;
   line-height: 1.7;
   letter-spacing: 0;
@@ -3080,8 +3062,8 @@ a:active {
   background: #fff;
 }
 .Ltext.L2 .data span, .Ltext.L3 .data span, .Ltext.L4 .data span, .Ltext.l5 .data span, .Ltext.l6 .data span, .Ltext.l7 .data span, .Ltext.l8 .data span {
-  font-size: 15px;
   color: #949494;
+  font-size: 15px;
   font-weight: 100;
   line-height: 1.4;
   letter-spacing: 0;
@@ -3187,8 +3169,8 @@ a:active {
   bottom: 0;
 }
 .Lthumb.L1 .content .title {
-  font-size: 32px;
   color: #000;
+  font-size: 32px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3196,8 +3178,8 @@ a:active {
   padding: 16px 0;
 }
 .Lthumb.L1 .content .description {
-  font-size: 16px;
   color: #949494;
+  font-size: 16px;
   font-weight: 100;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3226,8 +3208,8 @@ a:active {
   position: relative;
 }
 .Lthumb.L2 .content .title, .Lthumb.L3 .content .title, .Lthumb.L4 .content .title {
-  font-size: 20px;
   color: #000;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3235,8 +3217,8 @@ a:active {
   padding: 4px 0;
 }
 .Lthumb.L2 .content .description, .Lthumb.L3 .content .description, .Lthumb.L4 .content .description {
-  font-size: 14px;
   color: #949494;
+  font-size: 14px;
   font-weight: 100;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3267,8 +3249,8 @@ a:active {
   position: relative;
 }
 .Lthumb.L5 .content .title {
-  font-size: 20px;
   color: #000;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3276,8 +3258,8 @@ a:active {
   padding: 8px 0 4px 0;
 }
 .Lthumb.L5 .content .description {
-  font-size: 14px;
   color: #949494;
+  font-size: 14px;
   font-weight: 100;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3308,8 +3290,8 @@ a:active {
   position: relative;
 }
 .Lthumb.L6 .content .title {
-  font-size: 20px;
   color: #000;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3317,8 +3299,8 @@ a:active {
   padding: 8px 0 4px 0;
 }
 .Lthumb.L6 .content .description {
-  font-size: 14px;
   color: #949494;
+  font-size: 14px;
   font-weight: 100;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3349,8 +3331,8 @@ a:active {
   position: relative;
 }
 .Lthumb.L7 .content .title, .Lthumb.L8 .content .title {
-  font-size: 20px;
   color: #000;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3358,8 +3340,8 @@ a:active {
   padding: 4px 0;
 }
 .Lthumb.L7 .content .description, .Lthumb.L8 .content .description {
-  font-size: 14px;
   color: #949494;
+  font-size: 14px;
   font-weight: 100;
   line-height: 1.6;
   letter-spacing: 0;
@@ -3367,4 +3349,111 @@ a:active {
   overflow: hidden;
   letter-spacing: .04em;
   padding: 0 0 8px 0;
+}
+
+.highlight {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  color: #949494;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+  background: #f2f2f2;
+  font-family: 'Inconsolata';
+  margin: 0 auto;
+  max-width: 600px;
+  overflow: auto;
+  padding: 8px 16px;
+}
+.highlight pre {
+  margin: 0;
+}
+.highlight .gutter {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  color: #b0b0b0;
+  padding-right: 16px;
+  text-align: right;
+}
+.highlight .code {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 0 0 0 1px;
+  color: #5c5c5c;
+  padding-left: 16px;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .pi,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+pre .keyword,
+pre .winutils,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .request,
+pre .status,
+pre .nginx .title {
+  color: #859900;
+}
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+pre .title,
+pre .localvars,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .identifier,
+pre .vhdl,
+pre .literal,
+pre .id {
+  color: #268bd2;
+}
+pre .attribute,
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .type {
+  color: #b58900;
+}
+pre .preprocessor,
+pre .preprocessor .keyword,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata,
+pre .clojure .title {
+  color: #cb4b16;
+}
+pre .deletion {
+  color: #dc322f;
 }

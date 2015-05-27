@@ -5,7 +5,6 @@
 //-------------------------------
 
 $img-path: '/static/img';
-$base-view-width: 1168px;
 $default-line-height: 1.5;
 
 @import "../zenigame/src/zenigame";
@@ -22,8 +21,9 @@ $default-line-height: 1.5;
 // input以外選択できないようにする
 // :not(input){ -webkit-user-select: none; }
 html, body {
-  @include size(100%, auto, 100%, 100%);
-  @include typo($base-font-size, $gray900, 300, $default-line-height);
+  @include size(100%, auto);
+  @include minsize(100%);
+  @include typo($default-font-size, $gray900, 300, $default-line-height);
   text-transform: none;
   -webkit-text-size-adjust: 100%;
   font-family:'Noto Sans Japanese', $font;
@@ -37,18 +37,6 @@ a {
   &:active { color: $blue900; }
 }
 
-.highlight  {
-  padding: 16px;
-  margin: 8px 0;
-  border: 1px solid $gray100;
-  font-family: 'Inconsolata';
-  letter-spacing: 0.04em;
-  background: $gray50;
-  line-height: 1.4;
-  .title {
-    font-size: 12px;
-  }
-}
 
 //-------------------------------
 // Components
@@ -64,3 +52,4 @@ a {
 @import "components/Ltext";
 @import "components/Lphoto";
 @import "components/Lthumb";
+@import "components/syntax";
