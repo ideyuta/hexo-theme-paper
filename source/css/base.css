@@ -2665,10 +2665,6 @@ th {
   -webkit-tap-highlight-color: transparent;
 }
 
-* {
-  -webkit-touch-callout: none;
-}
-
 html, body {
   width: 100%;
   height: auto;
@@ -2677,7 +2673,7 @@ html, body {
   color: #212121;
   font-size: 16px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0;
   text-transform: none;
   -webkit-text-size-adjust: 100%;
@@ -2875,14 +2871,22 @@ a:active {
   width: 100%;
 }
 .PostDetail .PostContent h1, .PostDetail .PostContent h2, .PostDetail .PostContent h3, .PostDetail .PostContent h4, .PostDetail .PostContent h5, .PostDetail .PostContent h6 {
+  font-weight: 400;
+}
+.PostDetail .PostContent h1, .PostDetail .PostContent h2, .PostDetail .PostContent h3, .PostDetail .PostContent h4, .PostDetail .PostContent h5, .PostDetail .PostContent h6, .PostDetail .PostContent ul, .PostDetail .PostContent ol {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 1.5em auto;
+}
+.PostDetail .PostContent h2 {
+  font-size: 2.2em;
+  font-weight: 200;
+  margin: 2em auto .5em auto;
 }
 .PostDetail .PostContent img {
   max-width: 100%;
 }
 .PostDetail .PostContent p {
-  color: #5c5c5c;
+  color: #3d3d3d;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
@@ -2892,6 +2896,31 @@ a:active {
   margin: 24px auto;
 }
 
+.SideMatter {
+  position: absolute;
+  right: 5%;
+  width: 180px;
+  font-size: 12px;
+}
+.SideMatter ul {
+  padding: 0;
+}
+.SideMatter ul li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+@media screen and (max-width: 1168px) {
+  .SideMatter {
+    left: 0 !important;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    right: none;
+    top: 0 !important;
+    width: auto;
+  }
+}
 .L1 {
   *zoom: 1;
   width: 100%;
@@ -3361,7 +3390,7 @@ a:active {
   color: #949494;
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0;
   background: #f2f2f2;
   font-family: 'Inconsolata';

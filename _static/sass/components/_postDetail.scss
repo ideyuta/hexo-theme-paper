@@ -1,6 +1,7 @@
 .PostDetail {
   position: relative;
   width: 100%;
+
   .PostMeta {
     @include clearfix;
     margin: 0 auto;
@@ -38,8 +39,8 @@
         }
       }
     }
-
   }
+
   .PostContent {
     width: 100%;
     margin: 0 auto;
@@ -49,17 +50,52 @@
       }
     }
     h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+    }
+    h1, h2, h3, h4, h5, h6, ul, ol {
       max-width: 600px;
-      margin: 0 auto;
+      margin: 1.5em auto;
+    }
+    h2 {
+      font-size: 2.2em;
+      font-weight: 200;
+      margin: 2em auto .5em auto;
     }
     img {
       max-width: 100%;
     }
     p {
-      @include typo(16px, $gray700, 300, 1.8);
+      @include typo(16px, $gray800, 300, 1.8);
       letter-spacing: 0.04em;
       max-width: 600px;
       margin: 24px auto;
     }
+  }
+}
+
+.SideMatter {
+  position: absolute;
+  right: 5%;
+  width: 180px;
+  font-size: 12px;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 12px 0;
+    }
+  }
+}
+
+
+@include max-screen(1168px) {
+  .SideMatter {
+    left: 0 !important;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    right: none;
+    top: 0 !important;
+    width: auto;
   }
 }

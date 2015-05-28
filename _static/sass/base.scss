@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
-//-------------------------------
-// Settings
-//-------------------------------
-
-$img-path: '/static/img';
-$default-line-height: 1.5;
-
 @import "../zenigame/src/zenigame";
-
 
 //-------------------------------
 // Base
@@ -17,7 +9,7 @@ $default-line-height: 1.5;
 // リンク要素タップ時に色変更しない
 * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 // iOS でリンク長押ししてもポップアップメニューを出さない
-* { -webkit-touch-callout: none; }
+// * { -webkit-touch-callout: none; }
 // input以外選択できないようにする
 // :not(input){ -webkit-user-select: none; }
 html, body {
