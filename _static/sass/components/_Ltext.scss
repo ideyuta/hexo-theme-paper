@@ -1,11 +1,12 @@
 .Ltext {
-  &.L1 {
+  &.L1,
+  &.L5 {
     .title {
       @include typo(48px, $gray900, 300, 1.6);
-      display: block;
       letter-spacing: .04em;
+      margin: 0;
       max-width: 960px;
-      padding: 40px 16px;
+      padding: 32px 16px;
     }
     .description {
       @include typo(16px, $gray500, 100, 1.7);
@@ -13,45 +14,36 @@
       letter-spacing: .04em;
       padding: 0 16px;
     }
-    .data {
-      @include pos(absolute, null, 0, 0);
-      padding: 8px 16px;
-      background: #fff;
-      span {
-        @include typo($base-font-size - 1px, $gray500, 100, 1.4);
-        padding: 0 8px 0 0;
-        text-transform: capitalize;
-      }
-    }
   }
   
   &.L2,
   &.L3,
   &.L4,
-  &.l5,
-  &.l6,
-  &.l7,
-  &.l8 {
+  &.L7,
+  &.L8 {
     .title {
       @include typo(24px, $gray900, 300, 1.6);
-      display: block;
       letter-spacing: .04em;
-      padding: 24px 16px;
+      margin: 0;
     }
     .description {
       @include typo(14px, $gray500, 100, 1.7);
       letter-spacing: .04em;
-      padding: 0 16px;
     }
-    .data {
-      @include pos(absolute, null, 0, 0);
-      padding: 8px 16px;
-      background: #fff;
-      span {
-        @include typo($base-font-size - 1px, $gray500, 100, 1.4);
-        padding: 0 8px 0 0;
-        text-transform: capitalize;
-      }
+  }
+
+  &.L6 {
+    .title {
+      @include typo(40px, $gray900, 300, 1.5);
+      letter-spacing: .04em;
+      margin: 0;
+      padding: 32px 16px 0 16px;
+    }
+    .description {
+      @include typo(16px, $gray500, 100, 1.7);
+      max-width: 720px;
+      letter-spacing: .04em;
+      padding: 0 16px;
     }
   }
 

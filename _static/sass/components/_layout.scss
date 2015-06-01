@@ -32,7 +32,7 @@
 
 .L5 {
   @include border(0 1px 0 0, solid, $gray100);
-  @include size(63%, 600px);
+  @include size(63.4%, 600px);
   padding: 0 1.5%;
   float: left;
   margin: 24px 0;
@@ -43,7 +43,7 @@
   }
 }
 .L6 {
-  @include size(30%, 600px);
+  @include size(30.4%, 600px);
   float: right;
   padding: 0 1.5%;
   margin: 24px 0;
@@ -63,7 +63,7 @@
 }
 .L7,
 .L8 {
-  @include size(48%, 300px);
+  @include size(48%, 310px);
   float: left;
   margin: 24px 0;
   overflow: hidden;

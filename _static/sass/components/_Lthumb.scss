@@ -1,11 +1,55 @@
+%Lthumb_X {
+  width: 100%;
+  overflow: hidden;
+  img {
+    @include pos(relative, null, 50%);
+    @include size(auto);
+    max-height: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+%Lthumb_Y {
+  overflow: hidden;
+  width: 100%;
+  img {
+    @include pos(relative, 50%);
+    @include size(auto);
+    max-width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+%Lthumb_content {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  .title {
+    @include typo(20px, #000, 300, 1.6);
+    letter-spacing: .04em;
+    margin: .5em 0;
+    padding: 4px 0;
+  }
+  .description {
+    @include typo(14px, $gray500, 100, 1.6);
+    max-height: 100px;
+    overflow: hidden;
+    letter-spacing: .04em;
+    margin: 0;
+    padding: 0 0 8px 0;
+  }
+}
+
+
+
 .Lthumb {
   a {
-    &:hover {
-      .thumb {
-        img {
-          @include opacity(.96);
-        }
-      }
+    &:hover .thumb img {
+      @include opacity(.96);
     }
   }
 
@@ -48,97 +92,34 @@
   &.L3,
   &.L4 {
     .thumb {
-      @include size(100%, 180px);
-      overflow: hidden;
-      img {
-        @include pos(relative, 50%);
-        @include size(auto);
-        max-width: 100%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
+      @extend %Lthumb_Y;
+      height: 180px;
     }
     .content {
-      @include size(100%, 180px);
-      overflow: hidden;
-      position: relative;
-      .title {
-        @include typo(20px, #000, 300, 1.6);
-        letter-spacing: .04em;
-        padding: 4px 0;
-      }
-      .description {
-        @include typo(14px, $gray500, 100, 1.6);
-        max-height: 100px;
-        overflow: hidden;
-        letter-spacing: .04em;
-        padding: 0 0 8px 0;
-      }
+      @extend %Lthumb_content;
+      height: 180px;
     }
   }
   
   &.L5 {
     .thumb {
-      @include size(100%, 400px);
-      overflow: hidden;
-      img {
-        @include pos(relative, 50%);
-        @include size(auto);
-        max-width: 100%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
+      @extend %Lthumb_Y;
+      height: 400px;
     }
     .content {
-      @include size(100%, 200px);
-      overflow: hidden;
-      position: relative;
-      .title {
-        @include typo(20px, #000, 300, 1.6);
-        letter-spacing: .04em;
-        padding: 8px 0 4px 0;
-      }
-      .description {
-        @include typo(14px, $gray500, 100, 1.6);
-        max-height: 100px;
-        overflow: hidden;
-        letter-spacing: .04em;
-        padding: 0 0 8px 0;
-      }
+      @extend %Lthumb_content;
+      height: 200px;
     }
   }
 
   &.L6 {
     .thumb {
-      @include size(100%, 400px);
-      overflow: hidden;
-      img {
-        @include pos(relative, null, 50%);
-        @include size(auto);
-        max-height: 100%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-      }
+      @extend %Lthumb_X;
+      height: 400px;
     }
     .content {
-      @include size(100%, 200px);
-      overflow: hidden;
-      position: relative;
-      .title {
-        @include typo(20px, #000, 300, 1.6);
-        letter-spacing: .04em;
-        padding: 8px 0 4px 0;
-      }
-      .description {
-        @include typo(14px, $gray500, 100, 1.6);
-        max-height: 100px;
-        overflow: hidden;
-        letter-spacing: .04em;
-        padding: 0 0 8px 0;
-      }
+      @extend %Lthumb_content;
+      height: 200px;
     }
   }
 
@@ -146,33 +127,12 @@
   &.L7,
   &.L8 {
     .thumb {
-      @include size(100%, 150px);
-      overflow: hidden;
-      img {
-        @include pos(relative, 50%);
-        @include size(auto);
-        max-width: 100%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
+      @extend %Lthumb_Y;
+      height: 150px;
     }
     .content {
-      @include size(100%, 150px);
-      overflow: hidden;
-      position: relative;
-      .title {
-        @include typo(20px, #000, 300, 1.6);
-        letter-spacing: .04em;
-        padding: 4px 0;
-      }
-      .description {
-        @include typo(14px, $gray500, 100, 1.6);
-        max-height: 100px;
-        overflow: hidden;
-        letter-spacing: .04em;
-        padding: 0 0 8px 0;
-      }
+      @extend %Lthumb_content;
+      height: 150px;
     }
   }
 
