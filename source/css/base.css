@@ -2701,6 +2701,12 @@ a:active {
   color: #006da3;
 }
 
+.Header {
+  margin: 0 auto;
+  max-width: 1165px;
+  width: 100%;
+}
+
 .Pagination {
   height: 32px;
 }
