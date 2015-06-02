@@ -19,7 +19,7 @@ paths =
   browserify: ["#{dirs.src}/scripts/base.coffee"]
   coffee: ["#{dirs.src}/scripts/**/*.coffee"]
   sass: ["#{dirs.src}/sass/**/*.scss"]
-  images: ["#{dirs.src}/images/**/*.{png,jpg,gif}"]
+  images: ["#{dirs.src}/images/**/*.{png,jpg,gif,svg}"]
   font: ["#{dirs.src}/zenigame/dist/fonts/*"]
 
 
