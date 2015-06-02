@@ -19,6 +19,7 @@ paths =
   browserify: ["#{dirs.src}/scripts/base.coffee"]
   coffee: ["#{dirs.src}/scripts/**/*.coffee"]
   sass: ["#{dirs.src}/sass/**/*.scss"]
+  images: ["#{dirs.src}/images/**/*.{png,jpg,gif}"]
   font: ["#{dirs.src}/zenigame/dist/fonts/*"]
 
 
@@ -80,6 +81,16 @@ gulp.task 'prodJS', (cb) ->
 
 
 ###
+# Image
+###
+
+# imagesデータをコピー
+gulp.task 'images', ->
+  gulp.src paths.images
+    .pipe gulp.dest "#{dirs.dist}/images/"
+
+
+###
 # Font
 ###
 
@@ -128,4 +139,4 @@ gulp.task 'default', ['watch']
 # 本番用ファイル生成タスク
 gulp.task 'build', ->
   env = 'production'
-  runSequence 'clean', ['prodJS', 'prodCSS', 'font']
+  runSequence 'clean', ['prodJS', 'prodCSS', 'images', 'font']
