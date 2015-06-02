@@ -8,6 +8,16 @@ require('infinitescroll');
 
 $(function() {
   $('.Posts').infinitescroll({
+    loading: {
+      finished: void 0,
+      finishedMsg: null,
+      img: '/images/nakajima.gif',
+      msg: null,
+      msgText: "",
+      selector: null,
+      speed: 'fast',
+      start: void 0
+    },
     navSelector: '.Pagination',
     nextSelector: '.Pagination .next',
     itemSelector: '.Post'

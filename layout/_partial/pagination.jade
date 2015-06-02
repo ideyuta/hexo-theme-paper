@@ -1,0 +1,7 @@
+.Pagination
+  if page.prev
+    a.btn.prev(href=config.root + page.prev_link, title=__("prev") + ' articles')
+      i.znicon-chevron-left
+  if page.next
+    a.btn.next(href=config.root + page.next_link, title=__("next") + ' articles')
+      i.znicon-chevron-right
