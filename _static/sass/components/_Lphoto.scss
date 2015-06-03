@@ -1,13 +1,4 @@
 .Lphoto {
-  a {
-    &:hover {
-      .thumb {
-        img {
-          @include opacity(.96);
-        }
-      }
-    }
-  }
 
   &.L1 {
     .thumb {

@@ -1,6 +1,5 @@
 .Meta {
   @include size(100%, 30px);
-  @include pos(absolute, null, 0, 0);
   background: #fff;
   .date {
     float: left;
@@ -23,6 +22,10 @@
         a {
           @include typo(12px, $gray300, 200, 30px);
           letter-spacing: 0.12em;
+          text-decoration: none;
+          &:hover {
+            color: $gray500;
+          }
         }
       }
     }

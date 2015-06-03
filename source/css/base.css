@@ -2702,17 +2702,23 @@ a:active {
 }
 
 .Header {
-  margin: 0 auto;
-  max-width: 1165px;
+  border-color: #f2f2f2;
+  border-style: solid;
+  border-width: 0 0 1px 0;
   width: 100%;
+  height: 64px;
+}
+.Header h1 {
+  margin: 0;
+  padding: 12px;
+}
+.Header h1 img {
+  padding: 0;
 }
 
 .Meta {
   width: 100%;
   height: 30px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background: #fff;
 }
 .Meta .date {
@@ -2747,6 +2753,10 @@ a:active {
   line-height: 30px;
   letter-spacing: 0;
   letter-spacing: 0.12em;
+  text-decoration: none;
+}
+.Meta .categories ul li a:hover {
+  color: #949494;
 }
 
 .Pagination {
@@ -2800,25 +2810,27 @@ a:active {
   line-height: 30px;
 }
 
+.Posts {
+  max-width: 1165px;
+  margin: 0 auto;
+  width: 98%;
+}
+
 .Post {
   background: #fff;
   position: relative;
   width: 100%;
 }
-
-.Posts {
-  max-width: 1165px;
-  margin: 0 auto;
-  padding: 24px 0;
-}
-.Posts a {
+.Post .inner > a {
   width: 100%;
   height: 100%;
   display: block;
   text-decoration: none;
 }
-.Posts a:hover {
-  background: #fafafa;
+.Post .Meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .PostDetail {
@@ -2829,7 +2841,7 @@ a:active {
   *zoom: 1;
   margin: 0 auto;
   max-width: 800px;
-  padding: 80px 0;
+  padding: 48px 0 80px 0;
 }
 .PostDetail .PostMeta:before, .PostDetail .PostMeta:after {
   content: '';
@@ -2845,42 +2857,6 @@ a:active {
   line-height: 1.5;
   letter-spacing: 0;
   letter-spacing: 0.04em;
-}
-.PostDetail .PostMeta .date {
-  float: left;
-}
-.PostDetail .PostMeta .date p {
-  color: #ccc;
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 30px;
-  letter-spacing: 0;
-  letter-spacing: 0.12em;
-  margin: 0;
-}
-.PostDetail .PostMeta .categories {
-  float: left;
-  padding: 0 8px;
-}
-.PostDetail .PostMeta .categories ul {
-  margin: 0;
-}
-.PostDetail .PostMeta .categories ul li {
-  float: left;
-  list-style: none;
-  padding: 0 8px;
-}
-.PostDetail .PostMeta .categories ul li a {
-  color: #ccc;
-  font-size: 12px;
-  font-weight: 200;
-  line-height: 30px;
-  letter-spacing: 0;
-  letter-spacing: 0.12em;
-}
-.PostDetail .PostMeta .categories ul li a:hover {
-  background: #fff;
-  text-decoration: underline;
 }
 .PostDetail .PostContent {
   width: 100%;
@@ -2944,9 +2920,6 @@ a:active {
   *zoom: 1;
   width: 100%;
   height: 481px;
-  border-color: #f2f2f2;
-  border-style: solid;
-  border-width: 1px 0;
   clear: both;
   padding: 24px 0;
   overflow: hidden;
@@ -3105,11 +3078,6 @@ a:active {
   padding: 0 16px;
 }
 
-.Lphoto a:hover .thumb img {
-  opacity: 0.96;
-  filter: alpha(opacity=96);
-  -moz-filter: "alpha( opacity=96)";
-}
 .Lphoto.L1 .thumb {
   width: 100%;
   height: 481px;
@@ -3229,11 +3197,6 @@ a:active {
   padding: 0 0 8px 0;
 }
 
-.Lthumb a:hover .thumb img {
-  opacity: 0.96;
-  filter: alpha(opacity=96);
-  -moz-filter: "alpha( opacity=96)";
-}
 .Lthumb.L1 .thumb {
   width: 62%;
   height: 481px;

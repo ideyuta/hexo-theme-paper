@@ -6,38 +6,10 @@
     @include clearfix;
     margin: 0 auto;
     max-width: 800px;
-    padding: 80px 0;
+    padding: 48px 0 80px 0;
     .title {
       @include typo(48px, $gray900, 200, 1.5);
       letter-spacing: 0.04em;
-    }
-    .date {
-      float: left;
-      p {
-        @include typo(12px, $gray300, 200, 30px);
-        letter-spacing: 0.12em;
-        margin: 0;
-      }
-    }
-    .categories {
-      float: left;
-      padding: 0 8px;
-      ul {
-        margin: 0;
-        li {
-          float: left;
-          list-style: none;
-          padding: 0 8px;
-          a {
-            @include typo(12px, $gray300, 200, 30px);
-            letter-spacing: 0.12em;
-            &:hover {
-              background: #fff;
-              text-decoration: underline;
-            }
-          }
-        }
-      }
     }
   }
 
