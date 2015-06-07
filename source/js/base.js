@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
-var $, TweetCount;
+var $, LikeCount, TweetCount;
 
 $ = require('jquery');
 
@@ -38,9 +38,48 @@ TweetCount = (function() {
 
 })();
 
+LikeCount = (function() {
+  function LikeCount(el) {
+    this.$el = $(el);
+    this.$count = this.$el.find('.count');
+    this.url = this.$el.data('url');
+    if (this.$count.empty) {
+      this.getCount(this.url, (function(_this) {
+        return function(count) {
+          return _this.$count.html(count);
+        };
+      })(this));
+    }
+  }
+
+  LikeCount.prototype.getCount = function(url, cb) {
+    return $.ajax({
+      url: "http://graph.facebook.com/?id=" + encodeURIComponent(url),
+      type: 'get',
+      dataType: 'jsonp',
+      success: function(response) {
+        if (typeof response.shares === 'undefined') {
+          return cb(0);
+        } else {
+          return cb(response.shares);
+        }
+      },
+      error: function(response) {
+        return cb();
+      }
+    });
+  };
+
+  return LikeCount;
+
+})();
+
 $(function() {
   $('.tweet').each(function() {
     return new TweetCount(this);
+  });
+  $('.like').each(function() {
+    return new LikeCount(this);
   });
   $('.Posts').infinitescroll({
     loading: {
@@ -57,8 +96,11 @@ $(function() {
     nextSelector: '.Pagination .next',
     itemSelector: '.Post'
   }, function() {
-    return $('.tweet').each(function() {
+    $('.tweet').each(function() {
       return new TweetCount(this);
+    });
+    return $('.like').each(function() {
+      return new LikeCount(this);
     });
   });
 });
