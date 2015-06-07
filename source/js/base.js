@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
-var $, LikeCount, TweetCount;
+var $, HatebuCount, LikeCount, TweetCount;
 
 $ = require('jquery');
 
@@ -74,12 +74,51 @@ LikeCount = (function() {
 
 })();
 
+HatebuCount = (function() {
+  function HatebuCount(el) {
+    this.$el = $(el);
+    this.$count = this.$el.find('.count');
+    this.url = this.$el.data('url');
+    if (this.$count.empty) {
+      this.getCount(this.url, (function(_this) {
+        return function(count) {
+          return _this.$count.html(count);
+        };
+      })(this));
+    }
+  }
+
+  HatebuCount.prototype.getCount = function(url, cb) {
+    return $.ajax({
+      url: "http://api.b.st-hatena.com/entry.count?url=" + encodeURIComponent(url),
+      type: 'get',
+      dataType: 'jsonp',
+      success: function(response) {
+        if (typeof response === 'undefined') {
+          return cb(0);
+        } else {
+          return cb(response);
+        }
+      },
+      error: function(response) {
+        return cb();
+      }
+    });
+  };
+
+  return HatebuCount;
+
+})();
+
 $(function() {
   $('.tweet').each(function() {
     return new TweetCount(this);
   });
   $('.like').each(function() {
     return new LikeCount(this);
+  });
+  $('.hatebu').each(function() {
+    return new HatebuCount(this);
   });
   $('.Posts').infinitescroll({
     loading: {
@@ -99,8 +138,11 @@ $(function() {
     $('.tweet').each(function() {
       return new TweetCount(this);
     });
-    return $('.like').each(function() {
+    $('.like').each(function() {
       return new LikeCount(this);
+    });
+    return $('.hatebu').each(function() {
+      return new HatebuCount(this);
     });
   });
 });

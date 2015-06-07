@@ -49,10 +49,35 @@ class LikeCount
       error: (response) ->
         do cb
 
+class HatebuCount
+
+  constructor: (el) ->
+    @$el = $ el
+    @$count = @$el.find('.count')
+    @url = @$el.data 'url'
+
+    if @$count.empty
+      @getCount @url, (count) =>
+        @$count.html count
+
+  getCount: (url, cb) ->
+    $.ajax
+      url: "http://api.b.st-hatena.com/entry.count?url=" + encodeURIComponent(url)
+      type: 'get'
+      dataType: 'jsonp'
+      success: (response) ->
+        if typeof response == 'undefined'
+          cb 0
+        else
+          cb response
+      error: (response) ->
+        do cb
+
 
 $ ->
   $('.tweet').each -> new TweetCount @
   $('.like').each -> new LikeCount @
+  $('.hatebu').each -> new HatebuCount @
 
   $('.Posts').infinitescroll
     loading:
@@ -70,5 +95,6 @@ $ ->
   , ->
     $('.tweet').each -> new TweetCount @
     $('.like').each -> new LikeCount @
+    $('.hatebu').each -> new HatebuCount @
 
   return
