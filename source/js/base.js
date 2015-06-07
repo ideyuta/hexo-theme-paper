@@ -1,12 +1,47 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
-var $;
+var $, TweetCount;
 
 $ = require('jquery');
 
 require('infinitescroll');
 
+TweetCount = (function() {
+  function TweetCount(el) {
+    this.$el = $(el);
+    this.$count = this.$el.find('.count');
+    this.url = this.$el.data('url');
+    if (this.$count.empty) {
+      this.getCount(this.url, (function(_this) {
+        return function(count) {
+          return _this.$count.html(count);
+        };
+      })(this));
+    }
+  }
+
+  TweetCount.prototype.getCount = function(url, cb) {
+    return $.ajax({
+      url: "http://urls.api.twitter.com/1/urls/count.json?url=" + encodeURIComponent(url),
+      type: 'get',
+      dataType: 'jsonp',
+      success: function(response) {
+        return cb(response.count);
+      },
+      error: function(response) {
+        return cb();
+      }
+    });
+  };
+
+  return TweetCount;
+
+})();
+
 $(function() {
+  $('.tweet').each(function() {
+    return new TweetCount(this);
+  });
   $('.Posts').infinitescroll({
     loading: {
       finished: void 0,
@@ -21,6 +56,10 @@ $(function() {
     navSelector: '.Pagination',
     nextSelector: '.Pagination .next',
     itemSelector: '.Post'
+  }, function() {
+    return $('.tweet').each(function() {
+      return new TweetCount(this);
+    });
   });
 });
 
