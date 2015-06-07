@@ -2916,6 +2916,15 @@ a:active {
     width: auto;
   }
 }
+.Response ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Response ul li {
+  float: left;
+}
+
 .L1 {
   *zoom: 1;
   width: 100%;
