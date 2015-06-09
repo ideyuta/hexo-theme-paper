@@ -1,0 +1,16 @@
+mixin response(article)
+  - var path = "http://ideyuta.com/" + article.path
+  .Response
+    ul
+      li.tweet(data-url=path)
+        a(href="https://twitter.com/intent/tweet?original_referer=" + path + "&text=" + article.title + " ｜ ideyuta.com " + path)
+          i.znicon-twitter
+          span.count
+      li.like(data-url=path)
+        a(href="javascript: void(0);", onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=" + path + "&t=" + article.title + "', 'share', 'width=500, height=280');")
+          i.znicon-facebook
+          span.count
+      li.hatebu(data-url=path)
+        a(href="javascript: void(0);", onclick="window.open('http://b.hatena.ne.jp/entry/add/" + path + "', 'share', 'width=750, height=600');")
+          img(src='http://b.st-hatena.com/images/entry-button/button-only@2x.png')
+          span.count

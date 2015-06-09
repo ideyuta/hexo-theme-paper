@@ -2858,6 +2858,7 @@ a:active {
   margin: 0 auto;
   max-width: 800px;
   padding: 48px 0 80px 0;
+  position: relative;
 }
 .PostDetail .PostMeta:before, .PostDetail .PostMeta:after {
   content: '';
@@ -2932,13 +2933,50 @@ a:active {
     width: auto;
   }
 }
+.Response {
+  position: absolute;
+  right: 0;
+  background: #fff;
+}
 .Response ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .Response ul li {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
   float: left;
+  letter-spacing: 0.06em;
+  padding: 1px 4px 0 4px;
+}
+.Response ul li.tweet a {
+  color: #00aced;
+}
+.Response ul li.like a {
+  color: #305097;
+}
+.Response ul li.hatebu a {
+  color: #008fde;
+}
+.Response ul li a {
+  text-decoration: none;
+}
+.Response ul li a i {
+  padding: 0 1px 0 0;
+}
+.Response ul li a img {
+  width: 11px;
+  height: 11px;
+  padding: 9px 3px 0 0;
+  vertical-align: top;
+}
+.Response ul li a span {
+  line-height: 29px;
+  vertical-align: top;
 }
 
 .L1 {

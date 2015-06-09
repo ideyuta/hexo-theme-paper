@@ -7,6 +7,7 @@
     margin: 0 auto;
     max-width: 800px;
     padding: 48px 0 80px 0;
+    position: relative;
     .title {
       @include typo(48px, $gray900, 200, 1.5);
       letter-spacing: 0.04em;

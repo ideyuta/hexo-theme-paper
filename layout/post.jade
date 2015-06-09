@@ -12,5 +12,7 @@ append content
         include _partial/article_meta
         +date(page.date)
         +category(page.categories)
+        include _partial/response
+        +response(page)
     .PostContent 
       != page.content

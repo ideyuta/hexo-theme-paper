@@ -25,19 +25,8 @@ append content
             include _partial/article_meta
             +date(article.date)
             +category(article.categories)
-            .Response
-              ul
-                li.tweet(data-url="http://ideyuta.com/" + article.path)
-                  i.znicon-twitter
-                  i.count
-                li.like(data-url="http://ideyuta.com/" + article.path)
-                  i.znicon-facebook
-                  i.count
-                li.hatebu(data-url="http://ideyuta.com/" + article.path)
-                  img(src='http://b.st-hatena.com/images/entry-button/button-only@2x.png', width='16', height='16')
-                  i.count
-
-
+            include _partial/response
+            +response(article)
     - })
 
   include _partial/pagination
