@@ -2827,9 +2827,17 @@ a:active {
 }
 
 .Posts {
+  *zoom: 1;
   max-width: 1165px;
   margin: 0 auto;
   width: 98%;
+}
+.Posts:before, .Posts:after {
+  content: '';
+  display: table;
+}
+.Posts:after {
+  clear: both;
 }
 
 .Post {

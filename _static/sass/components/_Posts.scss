@@ -1,4 +1,5 @@
 .Posts {
+  @include clearfix;
   max-width: 1165px;
   margin: 0 auto;
   width: 98%;
