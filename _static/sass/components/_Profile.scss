@@ -1,0 +1,40 @@
+.Profile {
+  @include clearfix;
+  background: $gray50;
+  padding: 40px;
+  .thumb {
+    @include size(114px);
+    float: left;
+    padding: 16px;
+    img {
+      @include size(114px);
+    }
+  }
+  .bio {
+    float: left;
+    padding: 0 16px;
+    .name {
+      font-weight: 200;
+      margin-bottom: 0;
+    }
+    .summary {
+      font-weight: 200;
+      margin: 1em 0;
+    }
+    .social {
+      .btn {
+        color: $gray800;
+        text-decoration: none;
+        &.twitter {
+          color: #00aced;
+        }
+        &.facebook {
+          color: #305097;
+        }
+        &.github {
+          color: #000;
+        }
+      }
+    }
+  }
+}

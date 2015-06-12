@@ -2941,6 +2941,54 @@ a:active {
     width: auto;
   }
 }
+.Profile {
+  *zoom: 1;
+  background: #fafafa;
+  padding: 40px;
+}
+.Profile:before, .Profile:after {
+  content: '';
+  display: table;
+}
+.Profile:after {
+  clear: both;
+}
+.Profile .thumb {
+  width: 114px;
+  height: 114px;
+  float: left;
+  padding: 16px;
+}
+.Profile .thumb img {
+  width: 114px;
+  height: 114px;
+}
+.Profile .bio {
+  float: left;
+  padding: 0 16px;
+}
+.Profile .bio .name {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.Profile .bio .summary {
+  font-weight: 200;
+  margin: 1em 0;
+}
+.Profile .bio .social .btn {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+.Profile .bio .social .btn.twitter {
+  color: #00aced;
+}
+.Profile .bio .social .btn.facebook {
+  color: #305097;
+}
+.Profile .bio .social .btn.github {
+  color: #000;
+}
+
 .Response {
   position: absolute;
   right: 0;
