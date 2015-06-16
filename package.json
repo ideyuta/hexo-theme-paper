@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "browserify-shim": "^3.8.6",
+    "fastclick": "^1.0.6",
     "gulp-compass": "^2.0.4",
     "gulp-cssmin": "^0.1.7",
     "imagesloaded": "^3.1.8"

@@ -2,6 +2,8 @@
 
 $ = require 'jquery'
 require 'infinitescroll'
+attachFastClick = require 'fastclick'
+
 
 class TweetCount
 
@@ -75,6 +77,8 @@ class HatebuCount
 
 
 $ ->
+  attachFastClick document.body
+
   $('.tweet').each -> new TweetCount @
   $('.like').each -> new LikeCount @
   $('.hatebu').each -> new HatebuCount @
