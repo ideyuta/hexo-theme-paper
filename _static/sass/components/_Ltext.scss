@@ -1,50 +1,77 @@
-.Ltext {
-  &.L1,
-  &.L5 {
-    .title {
-      @include typo(48px, $gray900, 300, 1.6);
-      letter-spacing: .04em;
-      margin: 0;
-      max-width: 960px;
-      padding: 32px 16px;
+@include min-screen(480px) {
+  .Ltext {
+    &.L1,
+    &.L5 {
+      .title {
+        @include typo(48px, $gray900, 300, 1.6);
+        letter-spacing: .04em;
+        margin: 0;
+        max-width: 960px;
+        padding: 32px 16px;
+      }
+      .description {
+        @include typo(16px, $gray500, 100, 1.7);
+        max-width: 720px;
+        letter-spacing: .04em;
+        padding: 0 16px;
+      }
     }
-    .description {
-      @include typo(16px, $gray500, 100, 1.7);
-      max-width: 720px;
-      letter-spacing: .04em;
-      padding: 0 16px;
+
+    &.L2,
+    &.L3,
+    &.L4,
+    &.L7,
+    &.L8 {
+      .title {
+        @include typo(24px, $gray900, 300, 1.6);
+        letter-spacing: .04em;
+        margin: 0;
+      }
+      .description {
+        @include typo(14px, $gray500, 100, 1.7);
+        letter-spacing: .04em;
+      }
     }
-  }
   
-  &.L2,
-  &.L3,
-  &.L4,
-  &.L7,
-  &.L8 {
-    .title {
-      @include typo(24px, $gray900, 300, 1.6);
-      letter-spacing: .04em;
-      margin: 0;
+    &.L6 {
+      .title {
+        @include typo(40px, $gray900, 300, 1.5);
+        letter-spacing: .04em;
+        margin: 0;
+        padding: 32px 16px 0 16px;
+      }
+      .description {
+        @include typo(16px, $gray500, 100, 1.7);
+        max-width: 720px;
+        letter-spacing: .04em;
+        padding: 0 16px;
+      }
     }
-    .description {
-      @include typo(14px, $gray500, 100, 1.7);
-      letter-spacing: .04em;
+
+  }
+}
+
+@include media(phone) {
+  .Ltext {
+    &.L1,
+    &.L2,
+    &.L3,
+    &.L4,
+    &.L5,
+    &.L6,
+    &.L7,
+    &.L8 {
+      .title {
+        @include typo(24px, $gray900, 300, 1.6);
+        letter-spacing: .04em;
+        margin: 0;
+        padding: 0 2%;
+      }
+      .description {
+        @include typo(14px, $gray500, 100, 1.7);
+        letter-spacing: .04em;
+        padding: 0 2%;
+      }
     }
   }
-
-  &.L6 {
-    .title {
-      @include typo(40px, $gray900, 300, 1.5);
-      letter-spacing: .04em;
-      margin: 0;
-      padding: 32px 16px 0 16px;
-    }
-    .description {
-      @include typo(16px, $gray500, 100, 1.7);
-      max-width: 720px;
-      letter-spacing: .04em;
-      padding: 0 16px;
-    }
-  }
-
 }

@@ -31,3 +31,10 @@
     }
   }
 }
+
+@include media(phone) {
+  .Meta {
+    padding: 0 2%;
+    width: 96%;
+  }
+}

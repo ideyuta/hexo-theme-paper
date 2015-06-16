@@ -18,3 +18,9 @@
     @include pos(absolute, null, 0, 0);
   }
 }
+
+@include media(phone) {
+  .Posts {
+    width: 100%;
+  }
+}

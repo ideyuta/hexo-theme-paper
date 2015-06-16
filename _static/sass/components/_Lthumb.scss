@@ -1,4 +1,4 @@
-%Lthumb_X {
+@mixin Lthumb_X {
   width: 100%;
   overflow: hidden;
   img {
@@ -11,7 +11,7 @@
   }
 }
 
-%Lthumb_Y {
+@mixin Lthumb_Y {
   overflow: hidden;
   width: 100%;
   img {
@@ -24,7 +24,7 @@
   }
 }
 
-%Lthumb_content {
+@mixin Lthumb_content {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -45,90 +45,115 @@
 }
 
 
+@include min-screen(480px) {
+  .Lthumb {
 
-.Lthumb {
-
-  &.L1 {
-    .thumb {
-      @include size(62%, 481px);
-      float: left;
-      overflow: hidden;
-      img {
-        @include pos(relative, 50%);
-        @include size(auto);
-        max-width: 100%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+    &.L1 {
+      .thumb {
+        @include size(62%, 481px);
+        float: left;
+        overflow: hidden;
+        img {
+          @include pos(relative, 50%);
+          @include size(auto);
+          max-width: 100%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+      .content {
+        @include size(38%, 481px);
+        float: right;
+        > .inner {
+          padding: 16px;
+          position: absolute;
+          bottom: 0;
+        }
+        .title {
+          @include typo(32px, #000, 300, 1.6);
+          letter-spacing: .04em;
+          padding: 16px 0;
+        }
+        .description {
+          @include typo(16px, $gray500, 100, 1.6);
+          letter-spacing: .04em;
+          padding: 0 0 16px 0;
+        }
       }
     }
-    .content {
-      @include size(38%, 481px);
-      float: right;
-      > .inner {
-        padding: 16px;
-        position: absolute;
-        bottom: 0;
+
+    &.L2,
+    &.L3,
+    &.L4 {
+      .thumb {
+        @include Lthumb_Y;
+        height: 180px;
       }
-      .title {
-        @include typo(32px, #000, 300, 1.6);
-        letter-spacing: .04em;
-        padding: 16px 0;
-      }
-      .description {
-        @include typo(16px, $gray500, 100, 1.6);
-        letter-spacing: .04em;
-        padding: 0 0 16px 0;
+      .content {
+        @include Lthumb_content;
+        height: 180px;
       }
     }
-  }
-  
-  &.L2,
-  &.L3,
-  &.L4 {
-    .thumb {
-      @extend %Lthumb_Y;
-      height: 180px;
-    }
-    .content {
-      @extend %Lthumb_content;
-      height: 180px;
-    }
-  }
-  
-  &.L5 {
-    .thumb {
-      @extend %Lthumb_Y;
-      height: 400px;
-    }
-    .content {
-      @extend %Lthumb_content;
-      height: 200px;
-    }
-  }
 
-  &.L6 {
-    .thumb {
-      @extend %Lthumb_X;
-      height: 400px;
+    &.L5 {
+      .thumb {
+        @include Lthumb_Y;
+        height: 400px;
+      }
+      .content {
+        @include Lthumb_content;
+        height: 200px;
+      }
     }
-    .content {
-      @extend %Lthumb_content;
-      height: 200px;
+
+    &.L6 {
+      .thumb {
+        @include Lthumb_X;
+        height: 400px;
+      }
+      .content {
+        @include Lthumb_content;
+        height: 200px;
+      }
+    }
+
+    &.L7,
+    &.L8 {
+      .thumb {
+        @include Lthumb_Y;
+        height: 150px;
+      }
+      .content {
+        @include Lthumb_content;
+        height: 150px;
+      }
+    }
+
+  }
+}
+
+
+@include media(phone) {
+  .Lthumb {
+    &.L1,
+    &.L2,
+    &.L3,
+    &.L4,
+    &.L5,
+    &.L6,
+    &.L7,
+    &.L8 {
+      .thumb {
+        @include Lthumb_Y;
+        height: 180px;
+      }
+      .content {
+        @include Lthumb_content;
+        height: 180px;
+        padding: 0 2%;
+        width: 96%;
+      }
     }
   }
-
-
-  &.L7,
-  &.L8 {
-    .thumb {
-      @extend %Lthumb_Y;
-      height: 150px;
-    }
-    .content {
-      @extend %Lthumb_content;
-      height: 150px;
-    }
-  }
-
 }
