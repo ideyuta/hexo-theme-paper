@@ -2753,45 +2753,30 @@ a:active {
   float: right;
   padding: 16px;
 }
-.Header .pageResponse ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.Header .pageResponse ul li {
-  color: #ccc;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0;
-  float: left;
+.Header .pageResponse a {
   letter-spacing: 0.06em;
-  padding: 1px 8px 0 8px;
 }
-.Header .pageResponse ul li.tweet a {
+.Header .pageResponse a.tweet {
   color: #00aced;
 }
-.Header .pageResponse ul li.like a {
+.Header .pageResponse a.like {
   color: #305097;
 }
-.Header .pageResponse ul li.hatebu a {
+.Header .pageResponse a.hatebu {
   color: #008fde;
 }
-.Header .pageResponse ul li a {
-  text-decoration: none;
-}
-.Header .pageResponse ul li a i {
+.Header .pageResponse a i {
   padding: 0 1px 0 0;
 }
-.Header .pageResponse ul li a img {
+.Header .pageResponse a img {
   width: 14px;
   height: 14px;
-  padding: 8px 3px 0 0;
+  padding: 1px 4px 0 0;
   vertical-align: top;
 }
-.Header .pageResponse ul li a span {
-  line-height: 32px;
+.Header .pageResponse a span {
   vertical-align: top;
+  padding: 0 0 0 4px !important;
 }
 
 .Meta {

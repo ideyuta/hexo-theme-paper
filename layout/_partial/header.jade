@@ -2,16 +2,13 @@
   h1
     a(href="/"): img(src="/images/ide.svg", width="32", height="32")
   .pageResponse
-    ul
-      li.tweet(data-url="http://ideyuta.com/")
-        a(href="https://twitter.com/intent/tweet?original_referer=http://ideyuta.com/&text=ideyuta.com - http://ideyuta.com")
-          i.znicon-twitter
-          span.count
-      li.like(data-url="http://ideyuta.com/")
-        a(href="javascript: void(0);", onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://ideyuta.com/&t=ideyuta.com', 'share', 'width=500, height=280');")
-          i.znicon-facebook
-          span.count
-      li.hatebu(data-url="http://ideyuta.com/")
-        a(href="javascript: void(0);", onclick="window.open('http://b.hatena.ne.jp/entry/add/http://ideyuta.com/', 'share', 'width=750, height=600');")
-          img(src='http://b.st-hatena.com/images/entry-button/button-only@2x.png')
-          span.count
+    .BtnGroup
+      a.tweet.btn.f(data-url="http://ideyuta.com/", href="https://twitter.com/intent/tweet?original_referer=http://ideyuta.com/&text=ideyuta.com - http://ideyuta.com")
+        i.znicon-twitter
+        span.count
+      a.like.btn.f(data-url="http://ideyuta.com/", href="javascript: void(0);", onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://ideyuta.com/&t=ideyuta.com', 'share', 'width=500, height=280');")
+        i.znicon-facebook
+        span.count
+      a.hatebu.btn.f(data-url="http://ideyuta.com/", href="javascript: void(0);", onclick="window.open('http://b.hatena.ne.jp/entry/add/http://ideyuta.com/', 'share', 'width=750, height=600');")
+        img(src='http://b.st-hatena.com/images/entry-button/button-only@2x.png')
+        span.count
