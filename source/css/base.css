@@ -2742,11 +2742,56 @@ a:active {
   height: 64px;
 }
 .Header h1 {
+  float: left;
   margin: 0;
   padding: 12px;
 }
 .Header h1 img {
   padding: 0;
+}
+.Header .pageResponse {
+  float: right;
+  padding: 16px;
+}
+.Header .pageResponse ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Header .pageResponse ul li {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0;
+  float: left;
+  letter-spacing: 0.06em;
+  padding: 1px 8px 0 8px;
+}
+.Header .pageResponse ul li.tweet a {
+  color: #00aced;
+}
+.Header .pageResponse ul li.like a {
+  color: #305097;
+}
+.Header .pageResponse ul li.hatebu a {
+  color: #008fde;
+}
+.Header .pageResponse ul li a {
+  text-decoration: none;
+}
+.Header .pageResponse ul li a i {
+  padding: 0 1px 0 0;
+}
+.Header .pageResponse ul li a img {
+  width: 14px;
+  height: 14px;
+  padding: 8px 3px 0 0;
+  vertical-align: top;
+}
+.Header .pageResponse ul li a span {
+  line-height: 32px;
+  vertical-align: top;
 }
 
 .Meta {
