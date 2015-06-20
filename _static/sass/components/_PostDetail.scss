@@ -1,4 +1,5 @@
 .PostDetail {
+  padding: 0 0 56px 0;
   position: relative;
   width: 100%;
 
@@ -11,6 +12,9 @@
     .title {
       @include typo(48px, $gray900, 200, 1.5);
       letter-spacing: 0.04em;
+    }
+    .Meta {
+      position: relative;
     }
   }
 
@@ -32,43 +36,92 @@
     h2 {
       font-size: 2.2em;
       font-weight: 200;
+      line-height: 1.6em;
       margin: 2em auto .5em auto;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-weight: 200;
+      line-height: 1.6em;
     }
     img {
       max-width: 100%;
     }
-    p {
+    > p {
       @include typo(16px, $gray800, 300, 1.8);
       letter-spacing: 0.04em;
       max-width: 600px;
       margin: 24px auto;
     }
-  }
-}
-
-.SideMatter {
-  position: absolute;
-  right: 5%;
-  width: 180px;
-  font-size: 12px;
-  ul {
-    padding: 0;
-    li {
-      list-style: none;
-      margin: 12px 0;
+    blockquote {
+      @include border(0 0 0 3px, solid, $gray200);
+      max-width: 600px;
+      margin: 24px auto;
+      p {
+        padding: 0 0 0 24px;
+      }
+    }
+    .super {
+      color: $green500;
+      font-size: 11px;
+      vertical-align: super;
+    }
+    .note {
+      @include border(1px 0 0 0, solid, $gray100);
+      font-family: $font-serif;
+      margin: 48px auto 0 auto;
+      max-width: 600px;
+      padding: 24px;
+      br {
+        display: none;
+      }
+      p {
+        @include typo(12px, $gray500, 200, 1.9);
+        letter-spacing: 0.04em;
+        margin: 8px 0;
+        br {
+          display: block;
+        }
+      }
+      a {
+        color: $gray500;
+        &:hover {
+          color: $gray600;
+        }
+      }
     }
   }
 }
 
-
-@include max-screen(1168px) {
-  .SideMatter {
-    left: 0 !important;
-    margin: 0 auto;
-    max-width: 600px;
-    position: relative;
-    right: none;
-    top: 0 !important;
-    width: auto;
+@include max-screen(800px) {
+  .PostDetail {
+    .PostMeta {
+      padding: {
+        left: 2%;
+        right: 2%;
+        bottom: 32px;
+      }
+      .title {
+        font-size: 32px;
+      }
+    }
+    .PostContent {
+      h1, h2, h3, h4, h5, h6 {
+        width: 96%;
+      }
+      ul, ol {
+        padding-left: 6%;
+        width: 90%;
+      }
+      h2 {
+        font-size: 1.8em;
+      }
+      h3 {
+        font-size: 1.3em;
+      }
+      p {
+        width: 96%;
+      }
+    }
   }
 }

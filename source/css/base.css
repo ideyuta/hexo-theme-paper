@@ -2886,6 +2886,7 @@ a:active {
   }
 }
 .PostDetail {
+  padding: 0 0 56px 0;
   position: relative;
   width: 100%;
 }
@@ -2911,6 +2912,9 @@ a:active {
   letter-spacing: 0;
   letter-spacing: 0.04em;
 }
+.PostDetail .PostMeta .Meta {
+  position: relative;
+}
 .PostDetail .PostContent {
   width: 100%;
   margin: 0 auto;
@@ -2928,12 +2932,18 @@ a:active {
 .PostDetail .PostContent h2 {
   font-size: 2.2em;
   font-weight: 200;
+  line-height: 1.6em;
   margin: 2em auto .5em auto;
+}
+.PostDetail .PostContent h3 {
+  font-size: 1.5em;
+  font-weight: 200;
+  line-height: 1.6em;
 }
 .PostDetail .PostContent img {
   max-width: 100%;
 }
-.PostDetail .PostContent p {
+.PostDetail .PostContent > p {
   color: #3d3d3d;
   font-size: 16px;
   font-weight: 300;
@@ -2943,30 +2953,76 @@ a:active {
   max-width: 600px;
   margin: 24px auto;
 }
-
-.SideMatter {
-  position: absolute;
-  right: 5%;
-  width: 180px;
+.PostDetail .PostContent blockquote {
+  border-color: #e0e0e0;
+  border-style: solid;
+  border-width: 0 0 0 3px;
+  max-width: 600px;
+  margin: 24px auto;
+}
+.PostDetail .PostContent blockquote p {
+  padding: 0 0 0 24px;
+}
+.PostDetail .PostContent .super {
+  color: #00e64d;
+  font-size: 11px;
+  vertical-align: super;
+}
+.PostDetail .PostContent .note {
+  border-color: #f2f2f2;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  font-family: "YuMincho", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro";
+  margin: 48px auto 0 auto;
+  max-width: 600px;
+  padding: 24px;
+}
+.PostDetail .PostContent .note br {
+  display: none;
+}
+.PostDetail .PostContent .note p {
+  color: #949494;
   font-size: 12px;
+  font-weight: 200;
+  line-height: 1.9;
+  letter-spacing: 0;
+  letter-spacing: 0.04em;
+  margin: 8px 0;
 }
-.SideMatter ul {
-  padding: 0;
+.PostDetail .PostContent .note p br {
+  display: block;
 }
-.SideMatter ul li {
-  list-style: none;
-  margin: 12px 0;
+.PostDetail .PostContent .note a {
+  color: #949494;
+}
+.PostDetail .PostContent .note a:hover {
+  color: #757575;
 }
 
-@media screen and (max-width: 1168px) {
-  .SideMatter {
-    left: 0 !important;
-    margin: 0 auto;
-    max-width: 600px;
-    position: relative;
-    right: none;
-    top: 0 !important;
-    width: auto;
+@media screen and (max-width: 800px) {
+  .PostDetail .PostMeta {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 32px;
+  }
+  .PostDetail .PostMeta .title {
+    font-size: 32px;
+  }
+  .PostDetail .PostContent h1, .PostDetail .PostContent h2, .PostDetail .PostContent h3, .PostDetail .PostContent h4, .PostDetail .PostContent h5, .PostDetail .PostContent h6 {
+    width: 96%;
+  }
+  .PostDetail .PostContent ul, .PostDetail .PostContent ol {
+    padding-left: 6%;
+    width: 90%;
+  }
+  .PostDetail .PostContent h2 {
+    font-size: 1.8em;
+  }
+  .PostDetail .PostContent h3 {
+    font-size: 1.3em;
+  }
+  .PostDetail .PostContent p {
+    width: 96%;
   }
 }
 .Profile {
@@ -3063,6 +3119,45 @@ a:active {
   vertical-align: top;
 }
 
+.SideMatter {
+  position: absolute;
+  right: 5%;
+  width: 180px;
+  font-size: 12px;
+}
+.SideMatter br {
+  display: none;
+}
+.SideMatter ul {
+  padding: 0;
+}
+.SideMatter ul li {
+  list-style: none;
+  margin: 12px 0;
+}
+.SideMatter ul li p {
+  color: #00e64d;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0;
+  margin: 0;
+}
+.SideMatter a {
+  display: block;
+}
+
+@media screen and (max-width: 1168px) {
+  .SideMatter {
+    left: 0 !important;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    right: none;
+    top: 0 !important;
+    width: auto;
+  }
+}
 @media screen and (min-width: 480px) {
   .L1 {
     *zoom: 1;
@@ -3648,7 +3743,6 @@ a:active {
   margin: 0 auto;
   max-width: 600px;
   overflow: auto;
-  padding: 8px 16px;
 }
 .highlight pre {
   margin: 0;
@@ -3658,7 +3752,7 @@ a:active {
   border-style: solid;
   border-width: 0 1px 0 0;
   color: #b0b0b0;
-  padding-right: 16px;
+  padding: 8px 16px;
   text-align: right;
 }
 .highlight .code {
@@ -3736,4 +3830,10 @@ pre .clojure .title {
 }
 pre .deletion {
   color: #dc322f;
+}
+
+@media screen and (max-width: 800px) {
+  .highlight {
+    width: 96%;
+  }
 }
