@@ -22,7 +22,7 @@ append content
                   p.title= article.title
                   p.description= article.description
           .Meta
-            include _partial/article_meta
+            include _partial/meta
             +date(article.date)
             +category(article.categories)
             include _partial/response
@@ -31,4 +31,4 @@ append content
 
   include _partial/pagination
 
-  include _partial/GoogleAnalytics
+  include _partial/googleAnalytics
