@@ -1,26 +1,42 @@
 extends base
 
-prepend window_title
-  
+append window_title
+  &mdash;
   = page.category
-  | &mdash;
 
-block content
-  header
-    h2= page.category
+append page_title
+  span= page.category
 
-  ul.article-list
+append content
+  - var count = 0
+
+  .Posts
     - page.posts.each(function(article){
-
-      li
-        article
-          h3
-            a(href=config.root + article.path)= article.title
-          div.meta
-            include _partial/article_meta
-
+      - count++
+      div(class="Post L#{article.style} L#{count}")
+        .inner
+          a(href=config.root + article.path)
+            if(article.style == "text")
+              p.title= article.title
+              p.description= article.description
+            else if(article.style == "photo")
+              .thumb
+                img(src=article.thumb)
+            else if(article.style == "thumb")
+              .thumb
+                img(src=article.thumb)
+              .content
+                .inner
+                  p.title= article.title
+                  p.description= article.description
+          .Meta
+            include _partial/meta
             +date(article.date)
-
             +category(article.categories)
-
+            include _partial/response
+            +response(article)
     - })
+
+  include _partial/pagination
+
+  include _partial/googleAnalytics
