@@ -1,0 +1,35 @@
+.SideMatter {
+  position: absolute;
+  right: 5%;
+  width: 180px;
+  font-size: 12px;
+  br {
+    display: none;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      margin: 12px 0;
+      p {
+        @include typo(12px, $green500, 300);
+        margin: 0;
+      }
+    }
+  }
+  a {
+    display: block;
+  }
+}
+
+@include max-screen(1168px) {
+  .SideMatter {
+    left: 0 !important;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    right: none;
+    top: 0 !important;
+    width: auto;
+  }
+}
