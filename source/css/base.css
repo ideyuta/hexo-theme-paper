@@ -3158,6 +3158,60 @@ a:active {
     width: auto;
   }
 }
+.Share {
+  border-color: #f2f2f2;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  *zoom: 1;
+  text-align: center;
+}
+.Share:before, .Share:after {
+  content: '';
+  display: table;
+}
+.Share:after {
+  clear: both;
+}
+.Share ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0 auto;
+  padding: 56px 0 0 0;
+}
+.Share ul li {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+  float: left;
+  letter-spacing: 0.06em;
+}
+.Share ul li.tweet a {
+  color: #00aced;
+}
+.Share ul li.like a {
+  color: #305097;
+}
+.Share ul li.hatebu a {
+  color: #008fde;
+}
+.Share ul li a {
+  text-decoration: none;
+}
+.Share ul li a i {
+  padding: 0 1px 0 0;
+}
+.Share ul li a img {
+  width: 12px;
+  height: 12px;
+  padding: 3px 8px 0 0;
+  vertical-align: top;
+}
+.Share ul li a span {
+  vertical-align: top;
+}
+
 @media screen and (min-width: 480px) {
   .L1 {
     *zoom: 1;
@@ -3400,67 +3454,85 @@ a:active {
     padding: 0 2%;
   }
 }
-.Lphoto.L1 .thumb {
-  width: 100%;
-  height: 481px;
-  overflow: hidden;
+@media screen and (min-width: 480px) {
+  .Lphoto.L1 .thumb {
+    width: 100%;
+    height: 481px;
+    overflow: hidden;
+  }
+  .Lphoto.L1 .thumb img {
+    position: relative;
+    top: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .Lphoto.L2 .thumb, .Lphoto.L3 .thumb, .Lphoto.L4 .thumb {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+  }
+  .Lphoto.L2 .thumb img, .Lphoto.L3 .thumb img, .Lphoto.L4 .thumb img {
+    position: relative;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .Lphoto.L5 .thumb, .Lphoto.L6 .thumb {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  .Lphoto.L5 .thumb img, .Lphoto.L6 .thumb img {
+    position: relative;
+    top: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .Lphoto.L7 .thumb, .Lphoto.L8 .thumb {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .Lphoto.L7 .thumb img, .Lphoto.L8 .thumb img {
+    position: relative;
+    top: 50%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
-.Lphoto.L1 .thumb img {
-  position: relative;
-  top: 50%;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+@media screen and (max-width: 480px) {
+  .Lphoto.L1 .thumb, .Lphoto.L2 .thumb, .Lphoto.L3 .thumb, .Lphoto.L4 .thumb, .Lphoto.L5 .thumb, .Lphoto.L6 .thumb, .Lphoto.L7 .thumb, .Lphoto.L8 .thumb {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+  .Lphoto.L1 .thumb img, .Lphoto.L2 .thumb img, .Lphoto.L3 .thumb img, .Lphoto.L4 .thumb img, .Lphoto.L5 .thumb img, .Lphoto.L6 .thumb img, .Lphoto.L7 .thumb img, .Lphoto.L8 .thumb img {
+    position: relative;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
-.Lphoto.L2 .thumb, .Lphoto.L3 .thumb, .Lphoto.L4 .thumb {
-  width: 100%;
-  height: 360px;
-  overflow: hidden;
-}
-.Lphoto.L2 .thumb img, .Lphoto.L3 .thumb img, .Lphoto.L4 .thumb img {
-  position: relative;
-  left: 50%;
-  width: auto;
-  height: auto;
-  max-height: 100%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-.Lphoto.L5 .thumb, .Lphoto.L6 .thumb {
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-}
-.Lphoto.L5 .thumb img, .Lphoto.L6 .thumb img {
-  position: relative;
-  top: 50%;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.Lphoto.L7 .thumb, .Lphoto.L8 .thumb {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-.Lphoto.L7 .thumb img, .Lphoto.L8 .thumb img {
-  position: relative;
-  top: 50%;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 @media screen and (min-width: 480px) {
   .Lthumb.L1 .thumb {
     width: 62%;
