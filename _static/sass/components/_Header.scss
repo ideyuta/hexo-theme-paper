@@ -1,6 +1,8 @@
 .Header {
   @include border(0 0 1px 0, solid, $gray100);
   @include size(100%, 64px);
+  background: #fff;
+  position: relative;
   h1 {
     float: left;
     margin: 0;
@@ -8,10 +10,18 @@
     img {
       padding: 0;
     }
+    span {
+      @include typo(24px, #000, 100, 42px);
+      letter-spacing: 0.06em;
+      padding: 0 0 0 12px;
+      vertical-align: top;
+    }
   }
   .pageResponse {
-    float: right;
-    padding: 16px;
+    background: #fff;
+    padding: 16px 16px 11px 16px;
+    position: absolute;
+    right: 0;
     a {
       letter-spacing: 0.06em;
       &.tweet {
