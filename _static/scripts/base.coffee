@@ -2,6 +2,7 @@
 
 $ = require 'jquery'
 require 'infinitescroll'
+require 'lazysizes'
 attachFastClick = require 'fastclick'
 
 
@@ -79,9 +80,12 @@ class HatebuCount
 $ ->
   attachFastClick document.body
 
-  $('.tweet').each -> new TweetCount @
-  $('.like').each -> new LikeCount @
-  $('.hatebu').each -> new HatebuCount @
+  ide.postInit = =>
+    $('.tweet').each -> new TweetCount @
+    $('.like').each -> new LikeCount @
+    $('.hatebu').each -> new HatebuCount @
+
+  ide.postInit()
 
   $('.Posts').infinitescroll
     loading:
@@ -97,8 +101,6 @@ $ ->
     nextSelector: '.Pagination .next'
     itemSelector: '.Post'
   , ->
-    $('.tweet').each -> new TweetCount @
-    $('.like').each -> new LikeCount @
-    $('.hatebu').each -> new HatebuCount @
+    ide.postInit()
 
   return
