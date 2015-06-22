@@ -47,11 +47,30 @@
     img {
       max-width: 100%;
     }
+    figure {
+      max-width: 600px;
+      margin: 0 auto;
+      figcaption {
+        @include typo(12px, $gray500, 200, 1.8);
+        a {
+          color: $gray500;
+          &:hover {
+            color: $gray600;
+          }
+        }
+      }
+    }
     > p {
       @include typo(16px, $gray800, 300, 1.8);
       letter-spacing: 0.04em;
       max-width: 600px;
       margin: 24px auto;
+    }
+    > ul {
+      li {
+        @include typo(16px, $gray800, 300, 1.8);
+        letter-spacing: 0.04em;
+      }
     }
     blockquote {
       @include border(0 0 0 3px, solid, $gray200);

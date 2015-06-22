@@ -2987,6 +2987,23 @@ a:active {
 .PostDetail .PostContent img {
   max-width: 100%;
 }
+.PostDetail .PostContent figure {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.PostDetail .PostContent figure figcaption {
+  color: #949494;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+.PostDetail .PostContent figure figcaption a {
+  color: #949494;
+}
+.PostDetail .PostContent figure figcaption a:hover {
+  color: #757575;
+}
 .PostDetail .PostContent > p {
   color: #3d3d3d;
   font-size: 16px;
@@ -2996,6 +3013,14 @@ a:active {
   letter-spacing: 0.04em;
   max-width: 600px;
   margin: 24px auto;
+}
+.PostDetail .PostContent > ul li {
+  color: #3d3d3d;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0;
+  letter-spacing: 0.04em;
 }
 .PostDetail .PostContent blockquote {
   border-color: #e0e0e0;
